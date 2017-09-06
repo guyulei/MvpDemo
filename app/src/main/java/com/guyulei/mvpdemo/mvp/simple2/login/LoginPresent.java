@@ -1,13 +1,13 @@
-package com.guyulei.mvpdemo.mvp.simple;
+package com.guyulei.mvpdemo.mvp.simple2.login;
 
-import com.guyulei.mvpdemo.mvp.simple.base.BasePresent;
+import com.guyulei.mvpdemo.mvp.simple2.base.MvpBasePresenter;
 import com.guyulei.mvpdemo.utils.HttpUtils;
 
 /**
  * Created by A on 2017/9/5.
  */
 
-public class LoginPresent extends BasePresent<LoginView> {
+public class LoginPresent extends MvpBasePresenter<LoginView> {
 
     //持有 M
     private LoginModel mLoginModel;

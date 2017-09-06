@@ -1,4 +1,4 @@
-package com.guyulei.mvpdemo.mvp.simple;
+package com.guyulei.mvpdemo.mvp.simple2.login;
 
 import com.guyulei.mvpdemo.utils.HttpTask;
 import com.guyulei.mvpdemo.utils.HttpUtils;
