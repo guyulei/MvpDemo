@@ -1,4 +1,4 @@
-package com.guyulei.mvpdemo.mvp.simple2.base;
+package com.guyulei.mvpdemo.mvp.simple.base;
 
 import android.os.Bundle;
 

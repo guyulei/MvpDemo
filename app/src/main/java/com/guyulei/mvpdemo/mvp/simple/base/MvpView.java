@@ -1,4 +1,4 @@
-package com.guyulei.mvpdemo.mvp.simple2.base;
+package com.guyulei.mvpdemo.mvp.simple.base;
 
 /**
  * Created by A on 2017/9/5.

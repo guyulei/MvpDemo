@@ -1,8 +1,8 @@
-package com.guyulei.mvpdemo.mvp.simple2;
+package com.guyulei.mvpdemo.mvp.simple;
 
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpCallback;
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpPresent;
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpView;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpCallback;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpPresent;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpView;
 
 /**
  * Created by A on 2017/9/6.
@@ -46,8 +46,7 @@ public class ProxyMvpCallback<V extends MvpView, P extends MvpPresent<V>> implem
 
     @Override
     public P getPresenter() {
-        P presenter = mMvpCallback.getPresenter();
-        return presenter;
+        return mMvpCallback.getPresenter();
     }
 
     @Override

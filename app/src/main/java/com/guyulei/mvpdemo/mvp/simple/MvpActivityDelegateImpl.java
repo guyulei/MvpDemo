@@ -1,11 +1,11 @@
-package com.guyulei.mvpdemo.mvp.simple2;
+package com.guyulei.mvpdemo.mvp.simple;
 
 import android.os.Bundle;
 
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpActivityDelegate;
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpCallback;
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpPresent;
-import com.guyulei.mvpdemo.mvp.simple2.base.MvpView;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpActivityDelegate;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpCallback;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpPresent;
+import com.guyulei.mvpdemo.mvp.simple.base.MvpView;
 
 /**
  * Created by A on 2017/9/6.
