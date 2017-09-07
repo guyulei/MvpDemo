@@ -11,3 +11,10 @@ public interface LoginView extends MvpView {
 
     void onShowData(String result);
 }
+
+
+/*public interface LoginView extends MvpView {
+
+    void onLoginResult(String result);
+
+}*/

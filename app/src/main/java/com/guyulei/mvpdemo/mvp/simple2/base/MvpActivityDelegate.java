@@ -23,3 +23,5 @@ public interface MvpActivityDelegate<V extends MvpView, P extends MvpPresent<V>>
 
     public void onDestroy();
 }
+
+

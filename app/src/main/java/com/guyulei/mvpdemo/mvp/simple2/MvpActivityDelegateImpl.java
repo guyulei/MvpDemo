@@ -16,13 +16,8 @@ import com.guyulei.mvpdemo.mvp.simple2.base.MvpView;
 public class MvpActivityDelegateImpl<V extends MvpView, P extends MvpPresent<V>> implements MvpActivityDelegate<V, P> {
 
     private ProxyMvpCallback<V, P> mProxyMvpCallback;
-    private MvpCallback<V, P>      mvpCallback;
 
     public MvpActivityDelegateImpl(MvpCallback<V, P> mvpCallback) {
-        this.mvpCallback = mvpCallback;
-        if (mvpCallback == null) {
-            throw new NullPointerException("不能为空");
-        }
         this.mProxyMvpCallback = new ProxyMvpCallback<V, P>(mvpCallback);
     }
 
@@ -31,7 +26,7 @@ public class MvpActivityDelegateImpl<V extends MvpView, P extends MvpPresent<V>>
         //绑定view
         this.mProxyMvpCallback.CreatePresenter();
         this.mProxyMvpCallback.CreateView();
-        this.mProxyMvpCallback.attachView(mProxyMvpCallback.getMvpView());
+        this.mProxyMvpCallback.attachView();
     }
 
     @Override

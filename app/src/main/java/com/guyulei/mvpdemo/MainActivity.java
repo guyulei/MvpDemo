@@ -1,7 +1,4 @@
 package com.guyulei.mvpdemo;
-
-//
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,17 +19,6 @@ public class MainActivity extends MvpActivity<LoginView, LoginPresent> implement
         button.setOnClickListener(this);
     }
 
-
-    @Override
-    public LoginPresent CreatePresenter() {
-        return new LoginPresent();
-    }
-
-    @Override
-    public LoginView CreateView() {
-        return this;
-    }
-
     @Override
     public void onShowData(String result) {
         Toast.makeText(MainActivity.this, result, Toast.LENGTH_LONG).show();
@@ -41,5 +27,16 @@ public class MainActivity extends MvpActivity<LoginView, LoginPresent> implement
     @Override
     public void onClick(View view) {
         getPresenter().login("15958121433", "000000");
+    }
+
+    @Override
+    public LoginPresent CreatePresenter() {
+        return new LoginPresent();
+    }
+
+
+    @Override
+    public LoginView CreateView() {
+        return this;
     }
 }

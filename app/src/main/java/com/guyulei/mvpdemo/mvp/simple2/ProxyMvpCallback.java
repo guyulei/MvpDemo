@@ -25,9 +25,6 @@ public class ProxyMvpCallback<V extends MvpView, P extends MvpPresent<V>> implem
         if (presenter == null) {
             presenter = mMvpCallback.CreatePresenter();
         }
-        if (presenter == null) {
-            throw new NullPointerException("Presenter is not null!");
-        }
         mMvpCallback.setPresenter(presenter);
         return getPresenter();
     }
@@ -37,9 +34,6 @@ public class ProxyMvpCallback<V extends MvpView, P extends MvpPresent<V>> implem
         V view = mMvpCallback.getMvpView();
         if (view == null) {
             view = mMvpCallback.CreateView();
-        }
-        if (view == null) {
-            throw new NullPointerException("Presenter is not null!");
         }
         mMvpCallback.setMvpView(view);
         return getMvpView();
@@ -53,10 +47,6 @@ public class ProxyMvpCallback<V extends MvpView, P extends MvpPresent<V>> implem
     @Override
     public P getPresenter() {
         P presenter = mMvpCallback.getPresenter();
-        if (presenter == null) {
-            // 抛异常
-            throw new NullPointerException("Presenter is not null!");
-        }
         return presenter;
     }
 
@@ -70,11 +60,11 @@ public class ProxyMvpCallback<V extends MvpView, P extends MvpPresent<V>> implem
         return mMvpCallback.getMvpView();
     }
 
-    public void attachView(V view) {
-        mMvpCallback.setMvpView(view);
+    public void attachView() {
+        getPresenter().attachview(getMvpView());
     }
 
     public void detachView() {
-        mMvpCallback.setMvpView(null);
+        getPresenter().detachview();
     }
 }

@@ -1,7 +1,6 @@
 package com.guyulei.mvpdemo.mvp.simple2;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.guyulei.mvpdemo.mvp.simple2.base.MvpCallback;
@@ -17,6 +16,7 @@ public abstract class MvpActivity<V extends MvpView, P extends MvpPresent<V>> ex
 
     private P                             present;
     private V                             view;
+
     //代理对象持有目标对象引用
     private MvpActivityDelegateImpl<V, P> delegateimpl;//生命周期 实现类  目标对象
 
@@ -27,9 +27,10 @@ public abstract class MvpActivity<V extends MvpView, P extends MvpPresent<V>> ex
         return delegateimpl;
     }
 
+
     @Override
 
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //
         getDelegateimpl().onCreate(savedInstanceState);
